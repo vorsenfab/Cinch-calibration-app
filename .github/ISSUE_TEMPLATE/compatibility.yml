@@ -1,0 +1,32 @@
+name: Compatibility report
+description: Tell us whether the app works with your meter
+labels: [compatibility]
+body:
+  - type: dropdown
+    id: works
+    attributes:
+      label: Did zero calibration work?
+      options: ["Yes", "No", "Partly"]
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model / hardware type / firmware
+      description: From "Device info", e.g. CINCH52, hardware type 52 rev 2, firmware 7.93
+    validations:
+      required: true
+  - type: input
+    id: brand
+    attributes:
+      label: Crankset / brand
+      description: e.g. Easton EC90 SL, Race Face Next SL, Race Face Turbine
+  - type: textarea
+    id: weight
+    attributes:
+      label: Weight test result (optional)
+      description: Mass used and the error % shown
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
